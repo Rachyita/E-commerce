@@ -8,6 +8,7 @@ import SearchLogo from "../../assets/SearchLogo.png";
 const Navbar = () => {
   return (
     // complete div
+
     <div className="bg-[#F2F0F1]">
       <div className="flex mx-20 mt-2 justify-around h-12">
         {/* shop co div */}
@@ -29,7 +30,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search for products..."
-            className="w-full bg-[#F0F0F0] ml-2 text-sm"
+            className="w-full bg-[#F0F0F0] ml-2 text-sm focus:outline-none"
           ></input>
         </div>
 
