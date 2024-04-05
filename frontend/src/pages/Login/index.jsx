@@ -11,7 +11,7 @@ const Login = () => {
   return (
     //  main div
     <div className="flex justify-center items-center h-screen">
-      <div className="lg:w-1/4 items-center shadow-2xl justify-center bg-white my-4 rounded-3xl pb-6 px-2">
+      <div className="lg:w-1/3 items-center shadow-2xl justify-center bg-white my-4 rounded-3xl pb-6 px-2">
         {/*  globe logo div */}
         <div className="flex justify-center mt-5">
           <div className="shadow-lg  p-2">
@@ -28,7 +28,7 @@ const Login = () => {
         </div>
 
         {/*  logos div */}
-        <div className="flex w-full">
+        <div className="flex w-full px-4 ">
           <div className="flex justify-center mt-5 w-1/3">
             <div className="shadow-lg  py-2 px-10">
               <FcGoogle size="2rem" />
@@ -77,7 +77,7 @@ const Login = () => {
 
         <div className="flex justify-center w-full space-x-2 mt-2">
           <p className="text-sm">Don't have an account? </p>
-          <Link to="/Signup" className="text-sm text-blue-500">
+          <Link to="/" className="text-sm text-blue-500">
             {" "}
             Create account{" "}
           </Link>
