@@ -1,11 +1,21 @@
 import React from "react";
 
-import React from 'react'
 
-const index = () => {
+
+const NewArrivals = () => {
   return (
-    <div>index</div>
+    <div>
+      <div className="font-bold text-5xl text-center mt-10 ">NEW ARRIVALS</div>
+      <div flex>
+        <div>
+          <img></img>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   )
 }
 
-export default index
+export default NewArrivals

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -14,16 +14,21 @@ const Signup = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const handleSignup = async (data) => {
-    console.log(data)
+    console.log(data);
     const res = await axios.post("http://localhost:8000/", {
       Name: data.Name,
       Email: data.Email,
       Password: data.Password,
     });
-    console.log(res)
+    console.log(res);
+    if (res.data === "already exists") {
+      alert("already exists");
+    }
+    reset();
   };
 
   return (

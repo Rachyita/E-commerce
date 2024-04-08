@@ -1,13 +1,35 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import axios from "axios";
 
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { FiGlobe } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 
 const Login = () => {
+  const nav = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const handleLogin = async (data) => {
+    console.log(data);
+    const res = await axios.post("http://localhost:8000/Login", {
+      Email: data.Email,
+      Password: data.Password,
+    });
+    console.log(res);
+    if (res.data === "user not authorized") {
+      alert("Login failed");
+      reset();
+    } else nav("/Home");
+  };
   return (
     //  main div
     <div className="flex justify-center items-center h-screen">
@@ -54,18 +76,37 @@ const Login = () => {
         </div>
 
         {/* email password div */}
-        <form className="px-4 mt-4 ">
+        <form
+          onSubmit={handleSubmit((data) => {
+            handleLogin(data);
+          })}
+          className="px-4 mt-4 "
+        >
           <label>Email Address</label>
           <input
             type="text"
             placeholder="Enter your email"
             className="w-full pl-2 text-sm h-10 focus:outline-none my-2 border rounded "
+            {...register("Email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                message: "invalid email address",
+              },
+            })}
           />
+          {errors?.Email && <p>{errors?.Email.message}</p>}
+
           <label className="w-full">Password</label>
           <input
             type="password"
             className="w-full focus:outline-none border my-2 h-10 rounded "
+            {...register("Password", {
+              required: "password is required",
+            })}
           />
+          {errors?.Password && <p>{errors?.Password.message}</p>}
+
           <hr className="my-2" />
           <button
             type="submit"
