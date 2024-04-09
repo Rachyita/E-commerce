@@ -6,6 +6,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const app = express();
+
+app.use(express.static("Public/assets"));
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -24,19 +27,25 @@ const userSchema = new mongoose.Schema({
   Password: String,
 });
 
-// New Arrivals Schema
-const newArrivalsSchema = new mongoose.Schema({
-  Name: "String",
-  Rating: "String",
-  originalPrice: "String",
-  offeredPrice: "String",
+// Product Schema
+const productSchema = new mongoose.Schema({
+  Product_Name: String,
+  Price: Number,
+  Gender: String,
+  Category: String,
+  Stock: Number,
+  Brand: String,
+  Description: String,
+  Image: String,
 });
 
 // Model
 const User = mongoose.model("User", userSchema);
-const newArrivals = mongoose.model("newArrivals", newArrivalsSchema);
+const Product = mongoose.model("Product", productSchema);
 
 // Routes
+
+// api for user create
 app.post("/", async (req, res) => {
   // console.log(req.body);
   const salt = await bcrypt.genSalt(10);
@@ -69,16 +78,26 @@ app.post("/Login", async (req, res) => {
   );
 });
 
-// api for new arrivals
-app.post("/Home", (req, res) => {
-  newArrivals.create({
-    Name: "T-Shirt with Tape Details",
-    Rating: "4.5",
-    originalPrice: "$120",
-    offeredPrice: "$120",
+// api for add products
+
+app.post("/addProduct", async (req, res) => {
+  console.log(req.body);
+  Product.create({
+    Product_Name: req.body.Product_Name,
+    Price: req.body.Price,
+    Gender: req.body.Gender,
+    Category: req.body.Category,
+    Stock: req.body.Stock,
+    Brand: req.body.Brand,
+    Description: req.body.Description,
+    Image: req.body.Product_Name,
   });
 });
 
+app.get("/Home", async (req, res) => {
+  const response = await Product.find();
+  res.json(response);
+});
 app.listen(8000, () => {
   console.log("Server Started");
 });
