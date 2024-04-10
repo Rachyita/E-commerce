@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const NewArrivals = () => {
+const TopSelling = () => {
   const [Details, setDetails] = useState();
   const products = async (data) => {
     const res = await axios.get("http://localhost:8000/Home");
@@ -14,17 +14,17 @@ const NewArrivals = () => {
 
   return (
     <div>
-      {/*  New Arrivals div */}
+      {/*  Top Selling div */}
       <div className="pt-16"></div>
       <div className="lg:w-11/12 w-8/12 justify-center flex mx-20">
-        <h1 className="text-5xl font-bold">NEW ARRIVALS</h1>
+        <h1 className="text-5xl font-bold">TOP SELLING</h1>
       </div>
 
       {/* main div */}
       <div className="mx-20">
         <div className="flex mt-10">
           {Details ? (
-            Details.filter((data) => data.Description === "New Arrivals").map(
+            Details.filter((data) => data.Description === "Top Selling").map(
               (data) => {
                 return (
                   <div key={data._id}>
@@ -54,15 +54,13 @@ const NewArrivals = () => {
       </div>
 
       {/* view all div */}
-      <div className="w-full flex justify-center pb-16">
+      <div className="w-full flex justify-center pb-20">
         <button className="bg-white lg:w-1/12 w-1/6 h-12 mt-12 rounded-3xl  text-black border">
           View All
         </button>
       </div>
-      <hr/>
     </div>
-    
   );
 };
 
-export default NewArrivals;
+export default TopSelling;
