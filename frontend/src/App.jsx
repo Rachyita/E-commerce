@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import HomePage from "./pages/HomePage";
 import AddProduct from "./pages/AddProduct";
-import CustomerReview from "./pages/CustomerReview";
+import SubmitReview from "./pages/SubmitReview";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Home" element={<HomePage />} />
         <Route path="/AddProduct" element={<AddProduct />} />
-        <Route path="/CustomerReview" element={<CustomerReview />} />
+        <Route path="/SubmitReview" element={<SubmitReview />} />
       </Routes>
     </div>
   );

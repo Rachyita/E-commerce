@@ -4,7 +4,14 @@ import HeroSection from "./View/HeroSection";
 import NewArrivals from "./View/NewArrivals";
 import TopSelling from "./View/TopSelling";
 import BrowseByDressStyle from "./View/BrowseByDressStyle";
-import CustomerReview from "../../components/CustomerReview";
+import ReviewSection from "./View/ReviewSction";
+
+
+
+
+
+
+
 
 const HomePage = () => {
   return (
@@ -14,7 +21,9 @@ const HomePage = () => {
       <NewArrivals />
       <TopSelling />
       <BrowseByDressStyle />
-      <CustomerReview />
+      <ReviewSection />
+
+     
     </div>
   );
 };

@@ -39,9 +39,17 @@ const productSchema = new mongoose.Schema({
   Image: String,
 });
 
+// Review Schema
+const reviewSchema = new mongoose.Schema({
+  Rating: Number,
+  Customer_Name: String,
+  Feedback: String,
+});
+
 // Model
 const User = mongoose.model("User", userSchema);
 const Product = mongoose.model("Product", productSchema);
+const Review = mongoose.model("Review", reviewSchema);
 
 // Routes
 
@@ -98,6 +106,23 @@ app.get("/Home", async (req, res) => {
   const response = await Product.find();
   res.json(response);
 });
+
+// api for add review
+app.post("/SubmitReview", async (req, res) => {
+  console.log(req.body);
+  Review.create({
+    Rating: req.body.Rating,
+    Customer_Name: req.body.Customer_Name,
+    Feedback: req.body.Feedback,
+  });
+});
+
+// Retrieve reviews
+app.get("/Reviews", async (req, res) => {
+  const reviews = await Review.find();
+  res.json(reviews);
+});
+
 app.listen(8000, () => {
   console.log("Server Started");
 });
