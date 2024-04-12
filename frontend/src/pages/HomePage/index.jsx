@@ -5,13 +5,7 @@ import NewArrivals from "./View/NewArrivals";
 import TopSelling from "./View/TopSelling";
 import BrowseByDressStyle from "./View/BrowseByDressStyle";
 import ReviewSection from "./View/ReviewSction";
-
-
-
-
-
-
-
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (
@@ -22,8 +16,7 @@ const HomePage = () => {
       <TopSelling />
       <BrowseByDressStyle />
       <ReviewSection />
-
-     
+      <Footer />
     </div>
   );
 };
