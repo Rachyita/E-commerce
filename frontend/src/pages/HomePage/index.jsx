@@ -16,7 +16,7 @@ const HomePage = () => {
       <TopSelling />
       <BrowseByDressStyle />
       <ReviewSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

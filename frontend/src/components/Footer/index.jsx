@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       {/* main div */}
-      <div className="my-10 w-full flex space-x-36">
+      <div className="my-10 w-full flex gap-x-28">
         {/* div 1 */}
         <div className="w-1/5 space-y-4">
           {/* div 1.1 */}
