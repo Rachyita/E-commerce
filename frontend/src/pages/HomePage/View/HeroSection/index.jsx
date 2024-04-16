@@ -1,5 +1,5 @@
 import React from "react";
-
+import HeroImage from "../../../../assets/HeroImage.png";
 import HeroIconImage from "../../../../assets/HeroIconImage.jpeg";
 import DiamondImage from "../../../../assets/DiamondImage.png";
 import VersaceLogo from "../../../../assets/VersaceLogo.png";
@@ -12,74 +12,58 @@ const HeroSection = () => {
   return (
     // complete div
     <div>
-      {/* div for coloring */}
-      <div className="bg-[#F2F0F1]">
-        {/* div for division */}
-        <div className="flex mx-20">
-          {/* text divs */}
-          <div className="w-1/2 ">
-            <div className="w-4/5 mt-32">
-              <h1 className="font-black text-6xl">
-                FIND CLOTHES THAT MATCHES YOUR STYLE
-              </h1>
-            </div>
-            <p className="text-xs w-4/5 font-extralight mt-3 text-gray-600">
+      <div className="mt-4 lg:w-full lg:flex bg-Background-color  lg:pt-10 block ">
+        <div className=" w-full lg:w-1/2 flex  justify-center items-center bg-Background-color h-fit p-1">
+          <div className="w-full lg:w-2/3 pl-4 pr-4 lg:p-0">
+            <h1 className=" text-5xl mb-2 font-black">
+              FIND CLOTHES THAT MATCHES YOUR STYLE
+            </h1>
+            <p className="text-[#00000099] text-xs text-normal mb-5">
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
               of style.
             </p>
-
-            <button className="w-1/4 cursor-pointer bg-black text-white rounded-full text-xs font-normal h-11 mt-5 ">
+            <button className="border-2 border-black w-full h-14 lg:w-40 rounded-full bg-black text-white text-xs lg:h-9 p-2">
               Shop Now
             </button>
+            <div className="flex pt-10 flex-wrap lg:flex-nowrap justify-center">
+              <div className="border-r border-gray-300 pl-5 pr-5">
+                <h2 className="text-4xl">200+</h2>
+                <p className="text-xs text-gray-400 ">International Brands</p>
+              </div>
 
-            <div className="flex w-4/5 mt-8 space-x-4">
-              <div className="w-1/3 border-r-2">
-                <h1 className="font-semibold text-4xl">200+</h1>
-                <p className="text-gray-600 font-extralight text-xs">
-                  International Brands
-                </p>
+              <div className="border-r border-gray-300 pl-5 pr-5">
+                <h2 className="text-4xl">2000+</h2>
+                <p className="text-xs text-gray-400 ">High-Quality Products</p>
               </div>
-              <div className="w-1/3 ml-3 border-r-2 ">
-                <h1 className="text-4xl font-semibold">2000+</h1>
-                <p className="text-gray-600 font-extralight text-xs">
-                  High-Quality Products
-                </p>
-              </div>
-              <div className="w-1/3 ml-3 ">
-                <h1 className="text-4xl font-semibold">30000+</h1>
-                <p className="text-gray-600 font-extralight text-xs">
-                  Happy Customers
-                </p>
+              <div className="lg:border-r border-gray-300 pl-5 pr-5">
+                <h2 className="text-4xl">30000+</h2>
+                <p className="text-xs text-gray-400 ">Happy Customers</p>
               </div>
             </div>
           </div>
-
-          {/* image div */}
-          <div className="w-1/2 mt-4 flex ">
-            {/* <img
-              src={DiamondImage}
-              alt="HeroIconImage"
-              className="absolute top-1/2 w-1/12 h-1/12 left-[5%]"
-            ></img> */}
-            <img src={HeroIconImage} alt="HeroIconImage"></img>
-            {/* <img
-              src={DiamondImage}
-              alt="HeroIconImage"
-              className="absolute w-1/6 h-1/6 right-[8%] top-[10%]"
-            ></img> */}
-          </div>
+        </div>
+        <div className="w-full lg:w-1/2 mt-8 flex justify-center pr-10 relative">
+          <img
+            src={DiamondImage}
+            alt=""
+            className=" w-1/12 h-1/12 absolute top-1/2 left-[10%]"
+          />
+          <img src={HeroImage} alt="" className="w-8/12" />
+          <img
+            src={DiamondImage}
+            alt=""
+            className="w-1/5 h-1/4 absolute right-[15%]"
+          />
         </div>
       </div>
-
-      {/*  brands section */}
-      <div className="bg-black h-20 px-20 flex items-center ">
-        <div className="flex justify-between h-2/6 w-full">
-          <img src={VersaceLogo} alt="VersaceLogo"></img>
-          <img src={ZaraLogo} alt="ZaraLogo"></img>
-          <img src={GucciLogo} alt="GucciLogo"></img>
-          <img src={PradaLogo} alt="PradaLogo"></img>
-          <img src={CalvinKleinLogo} alt="CalvinKleinLogo"></img>
+      <div className="w-full bg-black flex justify-center p-6 flex-wrap">
+        <div className=" w-11/12 flex justify-between  bg-black ">
+          <img src={VersaceLogo} className="w-1/6 h-4/5" alt="" />
+          <img src={ZaraLogo} className="w-1/12 h-4/5" alt="" />
+          <img src={GucciLogo} alt="" className=" w-1/12 h-4/5" />
+          <img src={PradaLogo} className="w-1/6 h-4/5" alt="" />
+          <img src={CalvinKleinLogo} alt="" className=" w-2/12 h-4/5" />
         </div>
       </div>
     </div>

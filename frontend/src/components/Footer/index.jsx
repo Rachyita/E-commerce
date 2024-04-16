@@ -1,8 +1,5 @@
 import React from "react";
-import { TfiEmail } from "react-icons/tfi";
-import { FaTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { DiGithubBadge } from "react-icons/di";
 
 import VisaLogo from "../../assets/VisaLogo.png";
@@ -13,121 +10,109 @@ import GpayLogo from "../../assets/GpayLogo.png";
 
 const Footer = () => {
   return (
-    <div className="mx-20 ">
-      <div className="bg-black rounded-3xl w-full mt-20 flex">
-        <div className="text-white text-5xl font-semibold w-3/5 p-10">
-          STAY UPTO DATE ABOUT OUR LATEST OFFERS
-        </div>
-
-        <div className=" mx-16 my-10 w-2/5 ">
-          <div className=" flex h-10 mb-1">
-            <span className="bg-white rounded-l-full pl-3 pt-3">
-              <TfiEmail size="1rem " />
-            </span>
-            <input
-              placeholder="Enter your email address"
-              className="rounded-r-full w-full pl-2 placeholder:text-gray-400 focus:outline-none placeholder:text-sm"
-            />
-          </div>
-          <button className="bg-white text-center rounded-full w-full text-base h-10 mt-1">
-            Subscribe to Newsletter
-          </button>
-        </div>
-      </div>
-
-      {/* main div */}
-      <div className="my-10 w-full flex gap-x-28">
-        {/* div 1 */}
-        <div className="w-1/5 space-y-4">
-          {/* div 1.1 */}
-          <div className="font-bold text-3xl ">
-            <h1>SHOP.CO</h1>
-          </div>
-
-          {/* div 1.2 */}
-          <p className="text-xs text-gray-500 font-light ">
-            We have clothes that suits your style and which you’re proud to
-            wear. From women to men.
-          </p>
-
-          {/* div 1.3 */}
-          <div className="flex space-x-0.5 ">
-            <div className="rounded-full border-2 border-inherit p-0.5">
-              <div>
-                <FaTwitter size="1.2rem " />
-              </div>
+    <>
+      <div className="flex p-16 pb-8 bg-Background-color w-full absolute">
+        <div className="m-8 lg:flex w-full">
+          <div className="lg:w-1/3 w-full">
+            <div className=" w-1/7 mr-2 flex justify-start items-center">
+              <h1 className=" text-3xl font-bold pb-4">SHOP.CO</h1>
             </div>
-            <div className="rounded-full border-2 border-inherit p-0.5">
-              <div>
-                <FaFacebook size="1.2rem " />
-              </div>
+            <div className="lg:w-2/3 w-full">
+              <p className="text-xs">
+                We have clothes that suits your style and which you're proud to
+                wear. From women to men.
+              </p>
             </div>
-            <div className="rounded-full border-2 border-inherit p-0.5">
-              <div>
-                <FaInstagram size="1.2rem " />
+            <div className="flex lg:justify-start justify-center">
+              <div className="rounded-full border-2 border-inherit p-0.5">
+                <div>
+                  <FaTwitter size="1.2rem" />
+                </div>
               </div>
-            </div>
-            <div className="rounded-full border-2 border-inherit p-0.5">
-              <div>
-                <DiGithubBadge size="1.2rem " />
+              <div className="rounded-full border-2 border-inherit p-0.5">
+                <div>
+                  <FaFacebook size="1.2rem" />
+                </div>
+              </div>
+              <div className="rounded-full border-2 border-inherit p-0.5">
+                <div>
+                  <FaInstagram size="1.2rem" />
+                </div>
+              </div>
+              <div className="rounded-full border-2 border-inherit p-0.5">
+                <div>
+                  <DiGithubBadge size="1.2rem" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* div 2 */}
-        <div className="w-1/5 space-y-7 ">
-          <h6 className="font-mono text-sm">COMPANY</h6>
-          <div className="text-xs text-gray-500 font-light space-y-4">
-            <p>About</p>
-            <p>Features</p>
-            <p>Works</p>
-            <p>Career</p>
-          </div>
-        </div>
-
-        {/* div3 */}
-        <div className="w-1/5 space-y-7 ">
-          <h6 className="font-mono text-sm">HELP</h6>
-          <div className="text-xs text-gray-500 font-light space-y-4">
-            <p>Customer Support</p>
-            <p>Delivery Details</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-          </div>
-        </div>
-
-        {/* div4 */}
-        <div className="w-1/5 space-y-7 ">
-          <h6 className="font-mono text-sm">FAQ</h6>
-          <div className="text-xs text-gray-500 font-light space-y-4">
-            <p>Account</p>
-            <p>Manage Deliveries</p>
-            <p>Orders</p>
-            <p>Payments</p>
-          </div>
-        </div>
-
-        {/* div5 */}
-        <div className="w-1/5 space-y-7 ">
-          <h6 className="font-mono text-sm">RESOURCES</h6>
-          <div className="text-xs text-gray-500 font-light space-y-4">
-            <p>Free eBooks</p>
-            <p>Development Tutorial</p>
-            <p>How to - Blog</p>
-            <p>Youtube Playlist</p>
+          <div className="lg:flex block lg:justify-evenly lg:w-2/3 w-full justify-between">
+            <div className="flex ">
+              <div>
+                <p className="font-bold pb-4  ">Company</p>
+                <ul>
+                  <li className="pb-3 text-sm text-gray-500">About</li>
+                  <li className="pb-3 text-sm text-gray-500">Features</li>
+                  <li className="pb-3 text-sm text-gray-500">Works</li>
+                  <li className="pb-3 text-sm text-gray-500">Career</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold pb-4 ">Help</p>
+                <ul>
+                  <li className="pb-3 text-sm text-gray-500">
+                    {" "}
+                    Customer Support
+                  </li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    Delivery Details
+                  </li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    Terms & Conditions
+                  </li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    {" "}
+                    Privacy Policy
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex">
+              <div>
+                <p className="font-bold pb-4 ">FAQ</p>
+                <ul>
+                  <li className="pb-3 text-sm text-gray-500">Account</li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    Manage Deliveries
+                  </li>
+                  <li className="pb-3 text-sm text-gray-500">Orders</li>
+                  <li className="pb-3 text-sm text-gray-500">Payments</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold pb-4 ">Resources</p>
+                <ul>
+                  <li className="pb-3 text-sm text-gray-500"> Free eBooks</li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    Development Tutorial
+                  </li>
+                  <li className="pb-3 text-sm text-gray-500">How to - Blog</li>
+                  <li className="pb-3 text-sm text-gray-500">
+                    Youtube Playlist
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <hr />
-
-      <div className="w-full div flex relative mt-5 mb-14 ">
+      <div className="w-full div flex relative mt-5 mb-14">
         <p className="text-xs text-gray-500 font-light space-y-4">
           Shop.co © 2000-2023, All Rights Reserved
         </p>
-        <span className="flex absolute right-0 ">
-          <img src={VisaLogo} alt="VisaLogo" className="shadow-lg " />
+        <span className="flex absolute right-0">
+          <img src={VisaLogo} alt="VisaLogo" className="shadow-lg" />
           <img
             src={MastercardLogo}
             alt="MastercardLogo"
@@ -138,7 +123,7 @@ const Footer = () => {
           <img src={GpayLogo} alt="GpayLogo" className="shadow-lg" />
         </span>
       </div>
-    </div>
+    </>
   );
 };
 

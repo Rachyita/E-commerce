@@ -26,7 +26,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      
       <div className="w-screen flex justify-center h-28 pt-6 lg:pl-12 pl-12">
         <div className="sm:w-screen lg:w-11/12 w-screen bg-white h-16 flex items-center">
           <div className="text-3xl font-bold font-serif">SHOP.CO</div>
@@ -54,12 +53,11 @@ const Navbar = () => {
           </div>
           <div className="flex">
             <img src={CartLogo} className="lg:ml-16 ml-2"></img>
-            <img  className="ml-5 cursor-pointer" src={ProfileLogo}></img>
+            <img className="ml-5 cursor-pointer" src={ProfileLogo}></img>
           </div>
         </div>
       </div>
     </>
-   
   );
 };
 

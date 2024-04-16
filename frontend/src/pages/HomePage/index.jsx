@@ -5,6 +5,7 @@ import NewArrivals from "./View/NewArrivals";
 import TopSelling from "./View/TopSelling";
 import BrowseByDressStyle from "./View/BrowseByDressStyle";
 import ReviewSection from "./View/ReviewSction";
+import NewsLetter from "../../components/Newsletter";
 import Footer from "../../components/Footer";
 
 const HomePage = () => {
@@ -12,11 +13,12 @@ const HomePage = () => {
     <div>
       <Navbar />
       <HeroSection />
-      {/* <NewArrivals />
+      <NewArrivals />
       <TopSelling />
       <BrowseByDressStyle />
-      <ReviewSection /> */}
-      {/* <Footer /> */}
+      <ReviewSection />
+      <NewsLetter />
+      <Footer />
     </div>
   );
 };

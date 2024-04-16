@@ -3,11 +3,11 @@ import {
   CustomerReview1,
   CustomerReview2,
   CustomerReview3,
-  CustomerReview4,
-  CustomerReview5,
-  CustomerReview6,
-  CustomerReview7,
-  CustomerReview8,
+  // CustomerReview4,
+  // CustomerReview5,
+  // CustomerReview6,
+  // CustomerReview7,
+  // CustomerReview8,
 } from "../../../../components/ReviewCart";
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
@@ -23,27 +23,20 @@ const ReviewSection = () => {
   // };
   return (
     <>
-      <div className="w-full ">
-        <div className="w-full flex justify-center ">
-          <div className="w-4/5 pt-28 text-5xl font-bold flex ">
-            <p>OUR HAPPY CUSTOMERS</p>
-          </div>
-        </div>
-        <div className="w-full  flex justify-center mt-12">
-          <div className="w-10/12">
-            {/* <Slider {...settings}> */}
-            <CustomerReview1 />
-            <CustomerReview2 />
-            <CustomerReview3 />
-            <CustomerReview4 />
-            <CustomerReview5 />
-            <CustomerReview6 />
-            <CustomerReview7 />
-            <CustomerReview8 />
+      <div className="flex pt-4 px-4 lg:px-20 lg:text-5xl text-4xl font-bold text-center lg:text-left">
+        <h1>OUR HAPPY CUSTOMERS</h1>
+      </div>
 
-            {/* </Slider> */}
-          </div>
-        </div>
+      <div className="hidden lg:visible lg:flex lg:px-20 p-4 justify-center">
+        <CustomerReview1 />
+
+        <CustomerReview2 />
+
+        <CustomerReview3 />
+      </div>
+
+      <div className="visible lg:hidden  ">
+        <CustomerReview1 />
       </div>
     </>
   );
