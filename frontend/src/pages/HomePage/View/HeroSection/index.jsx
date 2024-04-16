@@ -56,18 +56,18 @@ const HeroSection = () => {
           </div>
 
           {/* image div */}
-          <div className="w-1/2 mt-4 flex relative">
-            <img
+          <div className="w-1/2 mt-4 flex ">
+            {/* <img
               src={DiamondImage}
               alt="HeroIconImage"
               className="absolute top-1/2 w-1/12 h-1/12 left-[5%]"
-            ></img>
+            ></img> */}
             <img src={HeroIconImage} alt="HeroIconImage"></img>
-            <img
+            {/* <img
               src={DiamondImage}
               alt="HeroIconImage"
               className="absolute w-1/6 h-1/6 right-[8%] top-[10%]"
-            ></img>
+            ></img> */}
           </div>
         </div>
       </div>

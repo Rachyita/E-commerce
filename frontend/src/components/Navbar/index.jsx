@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import CartLogo from "../../assets/CartLogo.png";
 import ProfileLogo from "../../assets/ProfileLogo.png";
 import SearchLogo from "../../assets/SearchLogo.png";
 
 const Navbar = () => {
+  // const navigate = useNavigate();
+  // const handleClick = () => {
+  //   navigate("/home/cart");
+  // };
+  // const ans = useSelector((state) => state.product);
+  // console.log(ans);
   return (
     // complete div<
 
-    <div className="m-0 p-0">
+    <>
       {/* upper div */}
       <div className="bg-black text-white text-center py-2  text-sm md:flex space-x-2 place-content-center">
         <p>Sign up and get 20% off to your first order.</p>
@@ -18,44 +26,40 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* lower div */}
-      <div className="bg-[#F2F0F1]">
-        <div className="flex lg:mx-20 mt-2 justify-around h-12 mx-2">
-          {/* shop co div */}
-          <div className="font-bold text-3xl py-2 w=1/6">
-            <h1>SHOP.CO</h1>
-          </div>
+      
+      <div className="w-screen flex justify-center h-28 pt-6 lg:pl-12 pl-12">
+        <div className="sm:w-screen lg:w-11/12 w-screen bg-white h-16 flex items-center">
+          <div className="text-3xl font-bold font-serif">SHOP.CO</div>
+          <div
+            className="lg:ml-24 md:ml-48 sm:ml-20
+          w-3/12"
+          >
+            <ul className="lg:flex hidden justify-between text-base font-normal ">
+              <li>Shop</li>
+              <li>On Sale</li>
 
-          {/* list div */}
-          <div className=" flex  py-2 px-4 font-3xl leading-10 w-1/3 justify-center space-x-8">
-            <Link to="">Shop</Link>
-            <Link to="">On Sale</Link>
-            <Link to="">New Arrivals</Link>
-            <Link to="">Brands</Link>
+              <li>New Arrivals</li>
+              <li>Brands</li>
+            </ul>
           </div>
-
-          {/* input div */}
-          <div className="flex w-1/2 p-2 rounded-full bg-[#F0F0F0] h-10 mt-2 ">
-            <img
-              src={SearchLogo}
-              alt="SearchLogo"
-              className="h-5/6 pt-1 pl-1"
-            />
-            <input
-              type="text"
-              placeholder="Search for products..."
-              className="w-full bg-[#F0F0F0] ml-2 text-sm focus:outline-none"
-            ></input>
+          <div className="w-1/3 bg-[#F0F0F0] rounded-3xl pl-10 ml-8 lg:flex hidden">
+            <div className="flex  items-center h-10  w-full">
+              <img src={SearchLogo} className="w-5"></img>
+              <input
+                className="ml-6 focus:outline-none bg-[#F0F0F0]"
+                type="text"
+                placeholder="Search For Products"
+              ></input>
+            </div>
           </div>
-
-          {/* logo div */}
-          <div className="flex w-1/12 justify-end p-2 space-x-2 h-5/6 mt-2">
-            <img src={CartLogo} alt="CartLogo" />
-            <img src={ProfileLogo} alt="ProfileLogo" />
+          <div className="flex">
+            <img src={CartLogo} className="lg:ml-16 ml-2"></img>
+            <img  className="ml-5 cursor-pointer" src={ProfileLogo}></img>
           </div>
         </div>
       </div>
-    </div>
+    </>
+   
   );
 };
 

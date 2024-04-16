@@ -7,7 +7,7 @@ const ProductDetail = () => {
   return (
     <div>
       <Navbar />
-      <LinkBar />
+      {/* <LinkBar /> */}
       <Footer />
     </div>
   );

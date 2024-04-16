@@ -12,10 +12,10 @@ const HomePage = () => {
     <div>
       <Navbar />
       <HeroSection />
-      <NewArrivals />
+      {/* <NewArrivals />
       <TopSelling />
       <BrowseByDressStyle />
-      <ReviewSection />
+      <ReviewSection /> */}
       {/* <Footer /> */}
     </div>
   );
