@@ -13,7 +13,7 @@ const TopSelling = () => {
   }, []);
 
   return (
-    <div>
+    <div id="TopSelling" className=" lg:pt-24">
       {/*  Top Selling div */}
 
       <div className="lg:w-11/12 w-8/12 justify-center flex mx-20 pt-12 text-5xl font-bold">

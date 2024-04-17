@@ -13,10 +13,10 @@ const NewArrivals = () => {
   }, []);
 
   return (
-    <div>
+    <div id="course" className=" lg:pt-24">
       {/*  New Arrivals div */}
 
-      <div className="lg:w-11/12 w-8/12 justify-center flex mx-20 pt-12 text-5xl font-bold">
+      <div className="lg:w-11/12 w-8/12 justify-center flex mx-20 pt-12 text-5xl font-bold ">
         <h1>NEW ARRIVALS</h1>
       </div>
 

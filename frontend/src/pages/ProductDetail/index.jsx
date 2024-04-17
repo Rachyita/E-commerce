@@ -1,13 +1,15 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import LinkBar from "./View/LinkBar";
+
 import Footer from "../../components/Footer";
+import MainSection from "./View/MainSection";
 
 const ProductDetail = () => {
   return (
     <div>
       <Navbar />
-      {/* <LinkBar /> */}
+
+      <MainSection />
       <Footer />
     </div>
   );
