@@ -35,14 +35,16 @@ const Navbar = () => {
             <li className="w-1/5 text-center text-base">
               <Link>On sale</Link>
             </li>
+
             <AnchorLink href="#course" className="w-1/3 text-center text-base">
-              <Link className="w-full">New Arrivals</Link>
+              <p className="w-full">New Arrivals</p>
             </AnchorLink>
+
             <AnchorLink
               href="#TopSelling"
               className="w-1/4 text-center text-base"
             >
-              <Link className="w-full">Top Selling</Link>
+              <p className="w-full">Top Selling</p>
             </AnchorLink>
           </ul>
         </div>

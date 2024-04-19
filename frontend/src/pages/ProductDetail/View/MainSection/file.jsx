@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Front from "../../../../assets/Front.png";
 import FrontS from "../../../../assets/FrontS.png";
@@ -8,34 +8,17 @@ import Zoom from "../../../../assets/Zoom.png";
 import { FaStar } from "react-icons/fa";
 
 const MainSection = () => {
-  const [displayedImage, setDisplayedImage] = useState(Front);
-
-  const handleImageClick = (image) => {
-    setDisplayedImage(image);
-  };
-
   return (
     <div className="w-full lg:flex lg:px-16">
       <div className="lg:w-1/2  ">
         <div className="p-4  lg:flex grid gap-4 lg:h-96 ">
+          {/* <img src={Front} className="w-full lg:hidden" /> */}
           <div className="flex lg:grid justify-between ">
-            <img
-              src={FrontS}
-              className="h-28 cursor-pointer"
-              onClick={() => handleImageClick(FrontS)}
-            />
-            <img
-              src={BackS}
-              className="h-28 cursor-pointer"
-              onClick={() => handleImageClick(BackS)}
-            />
-            <img
-              src={Zoom}
-              className="h-28 lg:visible cursor-pointer"
-              onClick={() => handleImageClick(Zoom)}
-            />
+            <img src={FrontS} className="h-28 " />
+            <img src={BackS} className="h-28" />
+            <img src={Zoom} className=" h-28 lg:visible " />
           </div>
-          <img src={displayedImage} className=" " />
+          <img src={Front} className="  " />
         </div>
       </div>
 

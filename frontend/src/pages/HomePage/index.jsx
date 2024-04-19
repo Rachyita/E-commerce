@@ -8,13 +8,12 @@ import ReviewSection from "./View/ReviewSction";
 import NewsLetter from "../../components/Newsletter";
 import Footer from "../../components/Footer";
 
-
 const HomePage = () => {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      
+
       <NewArrivals />
       <TopSelling />
       <BrowseByDressStyle />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const TopSelling = () => {
+const MightLikeSection = () => {
   const [Details, setDetails] = useState();
   const products = async (data) => {
     const res = await axios.get("http://localhost:8000/Home");
@@ -13,18 +13,18 @@ const TopSelling = () => {
   }, []);
 
   return (
-    <div id="TopSelling" className=" lg:pt-24">
-      {/*  Top Selling div */}
+    <div id="course">
+      {/*  New Arrivals div */}
 
-      <div className="lg:w-11/12 w-8/12 justify-center flex mx-20 pt-12 text-5xl font-bold">
-        <h1>TOP SELLING</h1>
+      <div className="lg:w-11/12 w-8/12 justify-center flex mx-20 pt-12 text-5xl font-bold ">
+        <h1>YOU MIGHT ALSO LIKE</h1>
       </div>
 
       {/* main div */}
 
-      <div className="lg:flex  mt-8 justify-center">
+      <div className="lg:flex mt-8 justify-center">
         {Details ? (
-          Details.filter((data) => data.Description === "Top Selling").map(
+          Details.filter((data) => data.Description === "New Arrivals").map(
             (data) => {
               return (
                 <div key={data._id}>
@@ -51,7 +51,7 @@ const TopSelling = () => {
 
       {/* view all div */}
       <div className="w-full flex justify-center ">
-        <button className=" lg:w-1/12 w-1/6 h-12 lg:mt-6 rounded-3xl  text-black border">
+        <button className="lg:w-1/12 w-1/6 h-12 mt-6 rounded-3xl  text-black border">
           View All
         </button>
       </div>
@@ -59,4 +59,4 @@ const TopSelling = () => {
   );
 };
 
-export default TopSelling;
+export default MightLikeSection;
