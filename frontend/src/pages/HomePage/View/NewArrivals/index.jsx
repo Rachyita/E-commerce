@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const NewArrivals = () => {
   const [Details, setDetails] = useState();
@@ -27,20 +28,22 @@ const NewArrivals = () => {
           Details.filter((data) => data.Description === "New Arrivals").map(
             (data) => {
               return (
-                <div key={data._id}>
-                  <div className="flex justify-center  my-2">
-                    <div className="flex-col mx-4 ">
-                      <img src={`http://localhost:8000/${data.Image}.png`} />
+                <Link to="/productDetail">
+                  <div key={data._id}>
+                    <div className="flex justify-center  my-2">
+                      <div className="flex-col mx-4 ">
+                        <img src={`http://localhost:8000/${data.Image}.png`} />
 
-                      <h5 className="mt-4 ml-4 text-left font-bold">
-                        {data.Product_Name}
-                      </h5>
-                      <p className="mt-1 ml-4 text-left font-semibold">
-                        ${data.Price}
-                      </p>
+                        <h5 className="mt-4 ml-4 text-left font-bold">
+                          {data.Product_Name}
+                        </h5>
+                        <p className="mt-1 ml-4 text-left font-semibold">
+                          ${data.Price}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             }
           )
